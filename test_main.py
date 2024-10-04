@@ -9,7 +9,7 @@ from mylib.query import read_query, update_query, delete_query, sorting_Change
 
 
 def test_extract():
-    assert extract() == "data/murder_2015_final.csv"
+    assert extract() == "../data/murder_2015_final.csv"
 
 
 def test_load():
