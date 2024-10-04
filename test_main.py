@@ -9,11 +9,11 @@ from mylib.query import read_query, update_query, delete_query, sorting_Change
 
 
 def test_extract():
-    assert extract() == "../data/murder_2015_final.csv"
+    assert extract() == "Extract Success"
 
 
 def test_load():
-    assert load() == "Murder2015.db"
+    assert load() == "Load Success"
 
 
 def test_readquery():
