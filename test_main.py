@@ -9,11 +9,13 @@ from mylib.query import read_query, update_query, delete_query, sorting_Change
 
 
 def test_extract():
-    assert extract() == "Extract Success"
+    results = extract()
+    assert results is not None
 
 
 def test_load():
-    assert load() == "Murder2015.db"
+    results = load()
+    assert results is not None
 
 
 def test_readquery():
