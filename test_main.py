@@ -13,7 +13,7 @@ def test_extract():
 
 
 def test_load():
-    assert load() == "Load Success"
+    assert load() == "Murder2015.db"
 
 
 def test_readquery():
