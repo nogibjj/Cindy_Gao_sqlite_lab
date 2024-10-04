@@ -1,5 +1,5 @@
 """
-Test goes here
+Tests of mylib goes here
 
 """
 
