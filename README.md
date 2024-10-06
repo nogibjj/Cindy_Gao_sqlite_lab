@@ -1,42 +1,59 @@
-## SQLite Lab
+# Python Script interacting with SQL Database
+## Requirements:
 
-![4 17-etl-sqlite-RAW](https://github.com/nogibjj/sqlite-lab/assets/58792/b39b21b4-ccb4-4cc4-b262-7db34492c16d)
+* Connect to a SQL database
+* Perform CRUD operations
+* Write at least two different SQL queries
+
+## Project Structure:
+
+- **.devcontainer**: Sets up a consistent development environment across different machines.
+- **.github/workflows**: Defines automated workflows for CI/CD tasks.
+- **Makefile**: Manages tasks like installing dependencies, formatting code, linting, and testing.
+- **requirements**: Lists the Python packages required by the project.
+- **main.py**: Contains the main code and functions for `query.py`.
+- **test_main.py**: Contains test cases for `mylib`.
+- **README.md**: Provides documentation and information for the project.
+- **data**: Contains extracted dataset CSV file: `murder_2015_final.csv`.
+- **mylib**: Contains:
+  - `extract.py`: Extracts a dataset from a URL.
+  - `query.py`: Contains functions including read query, update query, delete query, and sort the change columns.
+  - `transform_load.py`: Loads the transformed data into a SQLite database table using Python's `sqlite3` module.
+
+```plaintext
+Cindy_Gao_sqlite_lab/
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── .github/
+│   └── workflows/cicd.yml
+├── .gitignore
+├── LICENSE
+├── Makefile
+├── README.md
+├── data/
+│   └── murder_2015_final.csv
+├── main.py
+├── mylib/
+│   ├── __init__.py
+│   ├── __pycache__/
+│   ├── extract.py
+│   ├── query.py
+│   └── transform_load.py
+├── query_log.md
+├── requirements.txt
+├── setup.sh
+└── test_main.py
+```
+
+
+## Raw Data:
+https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/murder_2016/murder_2015_final.csv <br><br>
+The dataset presents the numbers of murders in 2014 and 2015, grouped by different cities in the US. <br><br>
+Here is a slice of the extracted database using SQLite: <br><br>
+![image](https://github.com/user-attachments/assets/9afdf2b2-dafa-48d2-83ba-5eece83f1fe4)
 
 
 
-### Lab:
-
-* Use an AI Assistant, but use a different one then you used from a previous lab (Anthropic's Claud, Bard, Copilot, CodeWhisperer, Colab AI, etc)
-* ETL-Query:  [E] Extract a dataset from URL, [T] Transform, [L] Load into SQLite Database and [Q] Query
-For the ETL-Query lab:
-* [E] Extract a dataset from a URL like Kaggle or data.gov. JSON or CSV formats tend to work well.
-* [T] Transform the data by cleaning, filtering, enriching, etc to get it ready for analysis.
-* [L] Load the transformed data into a SQLite database table using Python's sqlite3 module.
-* [Q] Write and execute SQL queries on the SQLite database to analyze and retrieve insights from the data.
-
-#### Tasks:
-
-* Fork this project and get it to run
-* Make the query more useful and not a giant mess that prints to screen
-* Convert the main.py into a command-line tool that lets you run each step independantly
-* Fork this project and do the same thing for a new dataset you choose
-* Make sure your project passes lint/tests and has a built badge
-* Include an architectural diagram showing how the project works
-
-#### Reflection Questions
-
-* What challenges did you face when extracting, transforming, and loading the data? How did you overcome them?
-* What insights or new knowledge did you gain from querying the SQLite database?
-* How can SQLite and SQL help make data analysis more efficient? What are the limitations?
-* What AI assistant did you use and how did it compare to others you've tried? What are its strengths and weaknesses?
-* If you could enhance this lab, what would you add or change? What other data would be interesting to load and query?
-
-##### Challenge Exercises
-
-* Add more transformations to the data before loading it into SQLite. Ideas: join with another dataset, aggregate by categories, normalize columns.
-* Write a query to find correlated fields in the data. Print the query results nicely formatted.
-* Create a second table in the SQLite database and write a join query with the two tables.
-* Build a simple Flask web app that runs queries on demand and displays results.
-* Containerize the application using Docker so the database and queries can be portable
 
 
