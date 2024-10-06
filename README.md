@@ -50,7 +50,9 @@ Cindy_Gao_sqlite_lab/
 ## Raw Data:
 https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/murder_2016/murder_2015_final.csv <br><br>
 The dataset presents the numbers of murders in 2014 and 2015, grouped by different cities in the US. <br><br>
-Here is a slice of the extracted database using SQLite: <br><br>
+Here is a screenshot of the extracted database using SQLite: <br><br>
+![image](https://github.com/user-attachments/assets/b55b826a-483c-4b21-99b6-8b5da535364e)
+
 ![image](https://github.com/user-attachments/assets/9afdf2b2-dafa-48d2-83ba-5eece83f1fe4)
 
 
